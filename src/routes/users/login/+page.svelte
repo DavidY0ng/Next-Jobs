@@ -4,7 +4,7 @@
     let formErrors = {}
 
     function postLogIn() {
-      goto('/jobs/new');
+      goto('/');
     }
 
     async function logInUser (evt) {
@@ -15,6 +15,7 @@
             password : evt.target['password'].value,
         }
         authenticateUser(userData.username,userData.password)
+        postLogIn()
     }
 
 </script>

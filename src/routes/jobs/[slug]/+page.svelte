@@ -1,10 +1,16 @@
 <script>
     import humanize from "humanize-plus";
     import SvelteMarkdown from 'svelte-markdown';
+    import {getUserId} from '../../../utils/auth.js'
+    import {status} from '../../../utils/auth.js'
     export let data;
-  </script>
+</script>
   
-  <div class="mt-10">
+{#if getUserId() === data.job.user}
+    <button class="btn"> Edit </button>
+{/if}
+
+<div class="mt-10">
     <div class="flex">
         <div class="flex-1">
             <h1 class="text-3xl font-extrabold">{data.job.title}</h1>

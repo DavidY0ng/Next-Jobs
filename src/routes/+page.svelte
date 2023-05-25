@@ -1,23 +1,21 @@
 <script>
     import humanize from 'humanize-plus';
-    import {logOut} from '../utils/auth.js'
-    import {isLoggedIn} from '../utils/auth.js'
+    import {status, logOut} from '../utils/auth.js'
     export let data;
-    let loggedInStatus = {isLoggedIn};
+
 </script>
 
 <h1 class="text-center text-xl font-bold">Find Your Next Job</h1>
 <a class = "btn btn-md bg-transparent font-bold" href="/users/new">Create an Account</a>
 <a class = "btn btn-md bg-transparent font-bold" href="/users/login">Log In</a>
 
-{#if loggedInStatus = true}
-    <a class = "btn btn-md bg-transparent font-bold" href=" " on:click = {logOut}>Log Out</a>
+
+{#if $status}
+    <button class = "btn btn-md bg-transparent font-bold" on:click = {logOut}>Log Out</button>
+    <a class = "btn btn-md bg-transparent font-bold" href="/postjobs">Post Jobs</a>
 {:else}
-    <a class = "btn btn-md bg-transparent font-bold" href=" ">Hello</a>
+    <a class = "btn btn-md bg-transparent font-bold" href="/users/new">Post Jobs</a>
 {/if}
-
-
-
 
 <div class="overflow-x-auto w-full">
     {#each data.jobs as job}

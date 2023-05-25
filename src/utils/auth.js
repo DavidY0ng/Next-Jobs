@@ -1,13 +1,16 @@
 import { PUBLIC_BACKEND_BASE_URL } from '$env/static/public';
-import {readable} from 'svelte/store';
+import {get, writable} from 'svelte/store';
 
 const emptyAuth = {
   "token": "",
   "userId": ""
 }
 
+export const status = writable(false)
+
 export function logOut() {
   localStorage.setItem("auth", JSON.stringify(emptyAuth));
+  status.set(false)
   return true
 }
 
@@ -53,15 +56,15 @@ export async function isLoggedIn() {
         "userId": res.record.id
       }));
 
+      status.set(true)
+
       return true
     }
-
     return false
   } catch {
     return false
   }
 }
-
 
 export async function authenticateUser(username, password) {
   const resp = await fetch(
@@ -86,6 +89,8 @@ export async function authenticateUser(username, password) {
       "token": res.token,
       "userId": res.record.id
     }));
+
+    status.set(true)
 
     return {
       success: true,
