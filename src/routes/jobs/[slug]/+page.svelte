@@ -7,9 +7,9 @@
 </script>
   
 {#if getUserId() === data.job.user}
-    <button class="btn"> Edit </button>
+    <a class="btn btn-md bg-transparent font-bold" href = "/jobs/{data.job.id}/edit"> Edit </a>
 {/if}
-
+<a class = "btn btn-md bg-transparent font-bold" href="/">Homepage</a>
 <div class="mt-10">
     <div class="flex">
         <div class="flex-1">
