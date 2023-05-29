@@ -7,14 +7,13 @@
 
 <h1 class="text-center text-xl font-bold">Find Your Next Job</h1>
 <a class = "btn btn-md bg-transparent font-bold" href="/users/new">Create an Account</a>
-<a class = "btn btn-md bg-transparent font-bold" href="/users/login">Log In</a>
-
 
 {#if $status}
     <button class = "btn btn-md bg-transparent font-bold" on:click = {logOut}>Log Out</button>
     <a class = "btn btn-md bg-transparent font-bold" href="/postjobs">Post Jobs</a>
 {:else}
     <a class = "btn btn-md bg-transparent font-bold" href="/users/new">Post Jobs</a>
+    <a class = "btn btn-md bg-transparent font-bold" href="/users/login">Log In</a>
 {/if}
 
 <div class="overflow-x-auto w-full">
