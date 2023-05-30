@@ -90,8 +90,6 @@
     }
 </script>
 
-<a class = "btn btn-md bg-transparent font-bold" href="/">Homepage</a>
-
 <div class = "container mx-auto">
     <form on:submit={updateJob} class=" ">
         {#if loading}

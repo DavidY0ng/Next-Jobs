@@ -4,8 +4,7 @@
     import { getTokenFromLocalStorage } from '../../utils/auth.js';
     import { getUserId } from '../../utils/auth.js'
     import { logOut } from '../../utils/auth.js'
-    import { isLoggedIn } from '../../utils/auth.js'
-    import { status } from '../../utils/auth.js'
+    
     
     let formErrors = {};
     let loading = false;
@@ -20,7 +19,6 @@
 
     async function createJob(evt) {
         if (!getTokenFromLocalStorage()) {
-            goto('/users/new')
             return false;
         }
 
@@ -75,8 +73,6 @@
         }
     }
 </script>
-
-<a class = "btn btn-md bg-transparent font-bold" href="/">Homepage</a>
 
 <div class = "container mx-auto">
     <form on:submit={createJob} class= "relative">

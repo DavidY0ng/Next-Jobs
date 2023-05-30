@@ -48,7 +48,6 @@
   </script>
   
   <h1 class="text-center text-xl">Create an Account to Post a Job</h1>
-  <a class = "btn btn-md bg-transparent font-bold" href="/">Homepage</a>
   <div class="text-center">
       <a class="link-hover italic text-xs" href="/users/login">Already have an account? Click here to login instead.</a>
   </div>

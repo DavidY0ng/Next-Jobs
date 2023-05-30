@@ -1,6 +1,8 @@
 <script>
 	import { logOut } from "./auth";
-  import status from "./auth"
+  import {logInStatus} from "./auth"
+  import { goto } from '$app/navigation';
+
 </script>
 
 <header>
@@ -9,7 +11,7 @@
           <a class = "btn btn-md bg-transparent font-bold" href="/">Homepage</a>
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-4 md:mt-0">
-            {#if $status}
+            {#if $logInStatus}
               <li>
                 <a class = "btn btn-md bg-transparent font-bold" href="/postjobs">Post Jobs</a>
               </li>

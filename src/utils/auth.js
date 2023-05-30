@@ -6,11 +6,11 @@ const emptyAuth = {
   "userId": ""
 }
 
-export const status = writable(false)
+export const logInStatus = writable(false)
 
 export function logOut() {
   localStorage.setItem("auth", JSON.stringify(emptyAuth));
-  status.set(false)
+  logInStatus.set(false)
   return true
 }
 
@@ -56,7 +56,7 @@ export async function isLoggedIn() {
         "userId": res.record.id
       }));
 
-      status.set(true)
+      logInStatus.set(true)
 
       return true
     }
@@ -90,7 +90,7 @@ export async function authenticateUser(username, password) {
       "userId": res.record.id
     }));
 
-    status.set(true)
+    logInStatus.set(true)
 
     return {
       success: true,

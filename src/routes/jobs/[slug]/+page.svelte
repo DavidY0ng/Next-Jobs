@@ -2,17 +2,19 @@
     import humanize from "humanize-plus";
     import SvelteMarkdown from 'svelte-markdown';
     import {getUserId} from '../../../utils/auth.js'
-    import {status} from '../../../utils/auth.js'
+    import { goto } from '$app/navigation';
+    import {logInStatus} from "../../../utils/auth"
     export let data;
+
 </script>
 
 <div class = "container mx-auto">
-    <a class = "btn btn-md bg-transparent font-bold" href="/">Homepage</a>
     <div class="mt-10">
         <div class = "flex flex-row-reverse">
-        {#if getUserId() === data.job.user}
+        {#if $logInStatus && getUserId() === data.job.user}
         <a class="btn btn-md bg-transparent font-bold" href = "/jobs/{data.job.id}/edit"> Edit </a>
         {/if}
+
         </div>
         <div class="flex">
             <div class="flex-1">

@@ -21,7 +21,6 @@
 </script>
 
 <h1 class ="text-center text-xl">Log in</h1>
-<a class = "btn btn-md bg-transparent font-bold" href="/">Homepage</a>
 <div class="flex justify-center items-center mt-8">
     <form on:submit={logInUser} class="w-1/3">
         <div class="form-control w-full">
