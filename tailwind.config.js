@@ -2,13 +2,14 @@
 export default {
   content: [
     './src/**/*.{html,js,svelte,ts}'],
+  darkMode: 'class',
   theme: {
     extend: {},
   },
   plugins: [require("daisyui"),
   require('@tailwindcss/typography')],
   daisyui: {
-    themes: ["cupcake"],
+    themes: ["cupcake","dark"],
     darkTheme: "dark",
   }
 }

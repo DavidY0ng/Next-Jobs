@@ -90,7 +90,7 @@
     }
 </script>
 
-<div class = "container mx-auto">
+<div class = "container mx-auto py-20">
     <form on:submit={updateJob} class=" ">
         {#if loading}
             <div class="absolute inset-0 flex items-center justify-center">
@@ -103,7 +103,7 @@
                 </div>
             </div>
         {/if}
-        <h1 class="text-center text-xl">Post a job</h1>
+        <h1 class="text-center text-xl">Edit</h1>
         <div class="mb-6">
             <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
             <input 

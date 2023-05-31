@@ -2,10 +2,10 @@
     import humanize from 'humanize-plus';
     import {logOut} from '../utils/auth.js'
     export let data;
-
 </script>
 
-<div class = "container mx-auto">
+
+<div class = "container mx-auto py-20">
     <h1 class="text-center text-xl font-bold">Find Your Next Job</h1>
     <div class="overflow-x-auto w-full">
         {#each data.jobs as job}

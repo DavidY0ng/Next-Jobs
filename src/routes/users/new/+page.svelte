@@ -47,7 +47,8 @@
     }
   </script>
   
-  <h1 class="text-center text-xl">Create an Account to Post a Job</h1>
+  <div class = "container mx-auto px-4 py-10">
+    <h1 class="text-center text-xl">Create an Account to Post a Job</h1>
   <div class="text-center">
       <a class="link-hover italic text-xs" href="/users/login">Already have an account? Click here to login instead.</a>
   </div>
@@ -55,7 +56,7 @@
       <form on:submit={createUser} class="w-1/3">
           <div class="form-control w-full">
               <label class="label" for="username">
-                  <span class="label-text">Username</span>
+                  <span class="text">Username</span>
               </label>
               <input type="text" name="username" placeholder="johndoe" class="input input-bordered w-full" />
               {#if 'username' in formErrors}
@@ -67,7 +68,7 @@
   
           <div class="form-control w-full">
               <label class="label" for="email">
-                  <span class="label-text">Email</span>
+                  <span class="text">Email</span>
               </label>
               <input type="email" name="email" placeholder="john@example.com" class="input input-bordered w-full" required />
               {#if 'email' in formErrors}
@@ -79,7 +80,7 @@
   
           <div class="form-control w-full">
               <label class="label" for="password">
-                  <span class="label-text">Password</span>
+                  <span class="text">Password</span>
               </label>
               <input type="password" name="password" placeholder="" class="input input-bordered w-full" required />
               {#if 'password' in formErrors}
@@ -91,7 +92,7 @@
   
           <div class="form-control w-full">
               <label class="label" for="password">
-                  <span class="label-text">Confirm Password</span>
+                  <span class="text">Confirm Password</span>
               </label>
               <input type="password" name="password-confirmation" placeholder="" class="input input-bordered w-full" required />
               {#if 'password' in formErrors}
@@ -106,3 +107,6 @@
           </div>
       </form>
   </div>
+
+  </div>
+  

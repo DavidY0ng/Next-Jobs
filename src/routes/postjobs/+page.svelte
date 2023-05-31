@@ -74,7 +74,7 @@
     }
 </script>
 
-<div class = "container mx-auto">
+<div class = "container mx-auto py-20">
     <form on:submit={createJob} class= "relative">
         {#if loading}
             <div class="absolute inset-0 flex items-center justify-center">

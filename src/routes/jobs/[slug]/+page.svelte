@@ -8,7 +8,7 @@
 
 </script>
 
-<div class = "container mx-auto">
+<div class = "container mx-auto py-20">
     <div class="mt-10">
         <div class = "flex flex-row-reverse">
         {#if $logInStatus && getUserId() === data.job.user}

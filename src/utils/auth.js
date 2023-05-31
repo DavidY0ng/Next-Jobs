@@ -1,5 +1,6 @@
 import { PUBLIC_BACKEND_BASE_URL } from '$env/static/public';
 import {get, writable} from 'svelte/store';
+import { goto } from '$app/navigation';
 
 const emptyAuth = {
   "token": "",
@@ -11,6 +12,7 @@ export const logInStatus = writable(false)
 export function logOut() {
   localStorage.setItem("auth", JSON.stringify(emptyAuth));
   logInStatus.set(false)
+  goto ('/')
   return true
 }
 

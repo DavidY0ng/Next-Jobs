@@ -51,9 +51,9 @@
         <form on:submit={logInUser} class="w-1/3">
             <div class="form-control w-full">
                 <label class="label" for="username">
-                    <span class="label-text">Username</span>
+                    <span class="text">Username</span>
                 </label>
-                <input type="text" name="username" placeholder="johndoe" class="input input-bordered w-full" required />
+                <input type="text" name="username" placeholder="johndoe" class="input input-bordered w-full"  required />
                 {#if 'username' in formErrors}
                 <label class="label" for="username">
                     <span class="label-text-alt text-red-500">{formErrors['username'].message}</span>
@@ -63,9 +63,9 @@
     
             <div class="form-control w-full">
                 <label class="label" for="password">
-                    <span class="label-text">Password</span>
+                    <span class="text">Password</span>
                 </label>
-                <input type="password" name="password" placeholder="" class="input input-bordered w-full" required />
+                <input type="password" name="password" placeholder="" class="input input-bordered w-full" autocomplete = "current-password"  required />
                 {#if 'password' in formErrors}
                 <label class="label" for="password">
                     <span class="label-text-alt text-red-500">{formErrors['password'].message}</span>
